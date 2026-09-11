@@ -12,38 +12,40 @@ const months = [
   { label: '26.10', cash: 3580, revenue: 0, spend: 1420, phase: '建置' },
   { label: '11', cash: 3363, revenue: 0, spend: 218, phase: '建置' },
   { label: '12', cash: 3145, revenue: 0, spend: 218, phase: '建置' },
-  { label: '27.01', cash: 2999, revenue: 124, spend: 271, phase: '試營運' },
-  { label: '02', cash: 2874, revenue: 154, spend: 279, phase: '試營運' },
-  { label: '03', cash: 2760, revenue: 164, spend: 279, phase: '試營運' },
-  { label: '04', cash: 2726, revenue: 274, spend: 309, phase: '試營運' },
-  { label: '05', cash: 2631, revenue: 184, spend: 279, phase: '試營運' },
-  { label: '06', cash: 2547, revenue: 194, spend: 279, phase: '試營運' },
-  { label: '07', cash: 2543, revenue: 304, spend: 309, phase: '試營運' },
-  { label: '08', cash: 2490, revenue: 234, spend: 287, phase: '成長' },
-  { label: '09', cash: 2448, revenue: 244, spend: 287, phase: '成長' },
-  { label: '10', cash: 2486, revenue: 354, spend: 317, phase: '成長' },
-  { label: '11', cash: 2463, revenue: 264, spend: 287, phase: '成長' },
-  { label: '12', cash: 2451, revenue: 274, spend: 287, phase: '成長' },
+  { label: '27.01', cash: 3052, revenue: 144, spend: 238, phase: '試營運' },
+  { label: '02', cash: 2968, revenue: 154, spend: 238, phase: '試營運' },
+  { label: '03', cash: 2895, revenue: 164, spend: 238, phase: '試營運' },
+  { label: '04', cash: 2902, revenue: 274, spend: 268, phase: '試營運' },
+  { label: '05', cash: 2848, revenue: 184, spend: 238, phase: '試營運' },
+  { label: '06', cash: 2805, revenue: 194, spend: 238, phase: '試營運' },
+  { label: '07', cash: 2842, revenue: 304, spend: 268, phase: '試營運' },
+  { label: '08', cash: 2818, revenue: 214, spend: 238, phase: '成長' },
+  { label: '09', cash: 2805, revenue: 224, spend: 238, phase: '成長' },
+  { label: '10', cash: 2872, revenue: 334, spend: 268, phase: '成長' },
+  { label: '11', cash: 2878, revenue: 244, spend: 238, phase: '成長' },
+  { label: '12', cash: 2895, revenue: 254, spend: 238, phase: '成長' },
 ];
 
 const stages = [
   { step: '01', name: '建置期', period: '2026.10—12', months: '3 個月', revenue: '0', spend: '185.5', result: '-185.5', cash: '314.5', objective: '完成場域、廁所、堆肥設備與生產團隊進場。', tone: 'build' },
-  { step: '02', name: '試營運期', period: '2027.01—07', months: '7 個月', revenue: '139.9', spend: '200.2', result: '-60.2', cash: '254.3', objective: '驗證清運客戶、蔬菜月增與每季課程的實際需求。', tone: 'trial' },
-  { step: '03', name: '營運成長期', period: '2027.08—12', months: '5 個月', revenue: '137.1', spend: '146.3', result: '-9.2', cash: '245.1', objective: '縮小月度虧損，讓成熟收入引擎接近損益兩平。', tone: 'growth' },
+  { step: '02', name: '試營運期', period: '2027.01—07', months: '7 個月', revenue: '141.9', spend: '172.3', result: '-30.3', cash: '284.2', objective: '分別驗證清運、堆肥、蔬菜與課程的實際需求。', tone: 'trial' },
+  { step: '03', name: '營運成長期', period: '2027.08—12', months: '5 個月', revenue: '127.1', spend: '121.8', result: '+5.3', cash: '289.5', objective: '讓成熟收入引擎支應固定成本，維持階段獲利。', tone: 'growth' },
 ];
 
 const units = [
-  { code: 'C01', name: '清運／堆肥', revenue: '56萬', cost: '126.4萬', result: '-70.4萬', tone: 'negative' },
+  { code: 'C01', name: '清運服務', revenue: '24萬', cost: '12萬', result: '+12萬', tone: 'positive' },
   { code: 'C02', name: '農場／蔬菜', revenue: '191萬', cost: '94.5萬', result: '+96.5萬', tone: 'positive' },
   { code: 'C03', name: '非營收支援', revenue: '—', cost: '40萬', result: '-40萬', tone: 'negative' },
   { code: 'C04', name: '課程教學', revenue: '30萬', cost: '89萬', result: '-59萬', tone: 'negative' },
+  { code: 'C05', name: '廚餘堆肥', revenue: '24萬', cost: '62萬', result: '-38萬', tone: 'negative' },
 ];
 
 const incomeDetails = [
-  { source: '有機蔬菜銷售', basis: '2027年1月10萬起，每月增加1萬', amount: '186萬元', share: '67.1%' },
-  { source: '清運服務運輸', basis: '每車次／客戶月2萬元', amount: '56萬元', share: '20.2%' },
-  { source: '自然農法課程', basis: '每季10萬元；4月、7月、10月各一期', amount: '30萬元', share: '10.8%' },
-  { source: '農場土地分租', basis: '年收入5萬元，2027年按月平均認列', amount: '5萬元', share: '1.8%' },
+  { source: '有機蔬菜銷售', basis: '2027年1月10萬起，每月增加1萬', amount: '186萬元', share: '69.1%' },
+  { source: '自然農法課程', basis: '每季10萬元；4月、7月、10月各一期', amount: '30萬元', share: '11.2%' },
+  { source: '清運服務', basis: '2027年起每月收入2萬元粗估', amount: '24萬元', share: '8.9%' },
+  { source: '堆肥販售與自用效益', basis: '2027年起每月效益2萬元粗估', amount: '24萬元', share: '8.9%' },
+  { source: '農場土地分租', basis: '年收入5萬元，2027年按月平均認列', amount: '5萬元', share: '1.9%' },
 ];
 
 const costDetails = [
@@ -51,8 +53,8 @@ const costDetails = [
   { group: '建置投入', item: '食農教育場域及廁所80萬＋堆肥設備與建構50萬＋園區安全建置10萬', timing: '建置期', amount: '140萬元', value: 140 },
   { group: '農場營運', item: '水電與農業生產5萬元／月＋農場年租21萬元按月攤提', timing: '2026.11起', amount: '94.5萬元', value: 94.5 },
   { group: '護生園區', item: '飼料、照護、醫療及園區維護合計2萬元／月', timing: '全期', amount: '30萬元', value: 30 },
-  { group: '清運營運', item: '處理合作、車輛油資與安全耗材合計4.5萬元／月', timing: '2027.01起', amount: '54萬元', value: 54 },
-  { group: '清運直接成本', item: '每車次／客戶月0.8萬元，隨服務量變動', timing: '隨收入', amount: '22.4萬元', value: 22.4 },
+  { group: '清運營運', item: '處理、車輛油資與耗材先合併粗估1萬元／月', timing: '2027.01起', amount: '12萬元', value: 12 },
+  { group: '堆肥製作', item: '廚餘堆肥製作成本粗估1萬元／月', timing: '2027.01起', amount: '12萬元', value: 12 },
   { group: '課程直接成本', item: '講師、教材、活動保險與接待合計3萬元／季', timing: '4月、7月、10月', amount: '9萬元', value: 9 },
 ];
 
@@ -122,7 +124,7 @@ export default function Home() {
       <section className="section monthly-section" aria-labelledby="monthly-title">
         <div className="section-heading compact-heading">
           <div><p className="eyebrow">月度收支走勢</p><h2 id="monthly-title">成長期，收支缺口明顯收斂。</h2></div>
-          <p>2027 年 10 月因季度課程入帳，單月轉正約 3.8 萬元。</p>
+          <p>2027 年 4 月因季度課程入帳首度轉正；成長期合計約獲利 5.3 萬元。</p>
         </div>
         <figure className="monthly-chart" aria-label="2026年10月至2027年12月每月收入與支出比較圖">
           <div className="monthly-legend"><span><i className="income-dot" />收入</span><span><i className="spend-dot" />支出</span></div>
@@ -150,35 +152,35 @@ export default function Home() {
         <div className="metrics-grid">
           <article className="metric-card accent-card">
             <span>規劃期收入</span>
-            <strong>277<small>萬元</small></strong>
-            <p>蔬菜收入占整體 67%</p>
+            <strong>269<small>萬元</small></strong>
+            <p>蔬菜收入占整體 69%</p>
           </article>
           <article className="metric-card">
             <span>規劃期支出</span>
-            <strong>531.9<small>萬元</small></strong>
+            <strong>479.5<small>萬元</small></strong>
             <p>含建置與一次性設備支出</p>
           </article>
           <article className="metric-card warning-card">
             <span>營運結果</span>
-            <strong>-254.9<small>萬元</small></strong>
+            <strong>-210.5<small>萬元</small></strong>
             <p><ArrowDownRight size={16} />成立初期預期投入</p>
           </article>
           <article className="metric-card reserve-card">
             <span>期末現金</span>
-            <strong>245.1<small>萬元</small></strong>
-            <p>最低現金仍高於保留額 44.8 萬元</p>
+            <strong>289.5<small>萬元</small></strong>
+            <p>最低現金仍高於保留額 80.5 萬元</p>
           </article>
         </div>
 
         <article className="cash-panel">
           <div className="panel-copy">
             <p className="eyebrow light">現金水位</p>
-            <h3>規劃期後仍保有<br /><em>29.4 個月</em>資金支應能力</h3>
-            <p>依目前平均淨耗用推估，2027 年 12 月期末現金為 245.1 萬元；最低現金出現在 9 月，仍有 244.8 萬元。</p>
+            <h3>規劃期後仍保有<br /><em>35.6 個月</em>資金支應能力</h3>
+            <p>依目前平均淨耗用推估，2027 年 12 月期末現金為 289.5 萬元；最低現金為 280.5 萬元。</p>
             <div className="reserve-key"><i />最低保留額 200 萬元</div>
           </div>
 
-          <figure className="cash-chart" aria-label="2026年10月至2027年12月期末現金水位，由358萬元變化至245.1萬元">
+          <figure className="cash-chart" aria-label="2026年10月至2027年12月期末現金水位，由358萬元變化至289.5萬元">
             <div className="chart-scale"><span>500萬</span><span>350萬</span><span>200萬</span></div>
             <div className="reserve-line"><span>保留線</span></div>
             <div className="bars">
@@ -198,11 +200,12 @@ export default function Home() {
 
       <section className="section split-section" id="business">
         <div className="business-intro">
-          <p className="eyebrow">三股收入引擎</p>
+          <p className="eyebrow">四股收入引擎</p>
           <h2>從單一生產，走向循環服務。</h2>
-          <p>蔬菜是首年最明確的正向貢獻來源；清運與課程則需要隨客戶量與開課規模逐步放大。</p>
-          <div className="engine-stack" aria-label="三項收入來源">
-            <div><Truck /><span><b>清運服務</b><small>56 萬元</small></span></div>
+          <p>蔬菜是最主要的正向貢獻來源；清運與堆肥則先以每月各2萬元效益、1萬元成本驗證。</p>
+          <div className="engine-stack" aria-label="四項主要收入來源">
+            <div><Truck /><span><b>清運服務</b><small>24 萬元</small></span></div>
+            <div><Sprout /><span><b>廚餘堆肥</b><small>24 萬元</small></span></div>
             <div><Leaf /><span><b>農場收入</b><small>191 萬元</small></span></div>
             <div><GraduationCap /><span><b>自然農法課程</b><small>30 萬元</small></span></div>
           </div>
@@ -225,7 +228,7 @@ export default function Home() {
               <strong className={unit.tone}>{unit.result}</strong>
             </div>
           ))}
-          <p className="table-note">另有共同人力與管理費用 182 萬元，未歸屬至單一事業。</p>
+          <p className="table-note">堆肥成本含建置設備50萬元；其經常營運本身為每月收入／效益2萬元、成本1萬元。</p>
         </div>
       </section>
 
@@ -242,11 +245,11 @@ export default function Home() {
           <div className="detail-grid">
             <article className="detail-card income-card">
               <div className="detail-card-head">
-                <span>收入來源</span><strong>277萬元</strong>
+                <span>收入來源</span><strong>269萬元</strong>
               </div>
-              <div className="income-visual"><div className="income-donut" aria-label="有機蔬菜67.1%，清運20.2%，課程10.8%，土地分租1.8%"><span>收入<br/><b>277萬</b></span></div></div>
+              <div className="income-visual"><div className="income-donut" aria-label="有機蔬菜69.1%，課程11.2%，清運8.9%，堆肥8.9%，土地分租1.9%"><span>收入<br/><b>269萬</b></span></div></div>
               <div className="source-bar" aria-hidden="true">
-                <i style={{ width: '67.1%' }} /><i style={{ width: '20.2%' }} /><i style={{ width: '10.8%' }} /><i style={{ width: '1.8%' }} />
+                <i style={{ width: '69.1%' }} /><i style={{ width: '11.2%' }} /><i style={{ width: '8.9%' }} /><i style={{ width: '8.9%' }} /><i style={{ width: '1.9%' }} />
               </div>
               {incomeDetails.map((row) => (
                 <div className="detail-row income-row" key={row.source}>
@@ -259,7 +262,7 @@ export default function Home() {
 
             <article className="detail-card cost-card">
               <div className="detail-card-head">
-                <span>成本支出</span><strong>531.9萬元</strong>
+                <span>成本支出</span><strong>479.5萬元</strong>
               </div>
               {costDetails.map((row) => (
                 <div className="detail-row cost-row" key={row.group}>
@@ -268,7 +271,7 @@ export default function Home() {
                   <strong><i className="cost-mini" style={{width:`${row.value / 1.82}%`}} />{row.amount}</strong>
                 </div>
               ))}
-              <p className="detail-footnote">以上金額合計約 531.9 萬元；四捨五入可能產生尾差。</p>
+              <p className="detail-footnote">以上金額合計約 479.5 萬元；四捨五入可能產生尾差。</p>
             </article>
           </div>
         </div>
@@ -313,9 +316,9 @@ export default function Home() {
           <h2>規劃期先驗證收入引擎，<br />再把成長變成獲利。</h2>
         </div>
         <div className="decision-list">
-          <p><span>01</span><span>農場與蔬菜事業預計貢獻 <b>+96.5 萬元</b>，包含土地分租收入 5 萬元。</span></p>
-          <p><span>02</span><span>成長期虧損縮至 <b>9.2 萬元</b>，最低現金仍高於安全線 44.8 萬元。</span></p>
-          <p><span>03</span><span>課程單季毛利 <b>7 萬元</b>；下一步應優先驗證清運客戶量與收費。</span></p>
+          <p><span>01</span><span>清運服務經常營運預計貢獻 <b>+12 萬元</b>，與堆肥分開追蹤。</span></p>
+          <p><span>02</span><span>堆肥經常營運預計貢獻 <b>+12 萬元</b>；納入50萬元設備後，規劃期貢獻為負38萬元。</span></p>
+          <p><span>03</span><span>成長期預計轉為 <b>+5.3 萬元</b>，但堆肥自用效益仍需用實際替代成本驗證。</span></p>
         </div>
       </section>
 
